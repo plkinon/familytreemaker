@@ -36,5 +36,5 @@ else:
     ancestor = family.find_first_ancestor()
 
 # Output the graph descriptor, in DOT format
-sys.stdout = open("family.dot", "wt")
+sys.stdout = open("familytreemaker/examples/LouisXIVfamily.dot", "wt")
 family.output_descending_tree(ancestor)

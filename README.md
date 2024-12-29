@@ -32,15 +32,15 @@ The sample family descriptor `LouisXIVfamily.txt` is here to show you the
 usage. With the activated environment, simply run:
 
 ```bash
-python scripts/create.py -a 'Louis XIV' LouisXIVfamily.txt | dot -Tpng -o LouisXIVfamily.png
+python scripts/create.py -a 'Louis XIV' familytreemaker/examples/LouisXIVfamily.txt | dot -Tpng -o familytreemaker/examples/LouisXIVfamily.png
 ```
 It will generate the tree from the infos in `LouisXIVfamily.txt`, starting from
 *Louis XIV* and saving the image in `LouisXIVfamily.png`.
 
 You can do both steps seperately, as well:
 ```bash
-python scripts/main.py -a 'Louis XIV' LouisXIVfamily.txt
-dot family.dot -Tpng -o LouisXIVfamily.png
+python scripts/main.py -a 'Louis XIV' familytreemaker/examples/LouisXIVfamily.txt
+dot familytreemaker/examples/LouisXIVfamily.dot -Tpng -o familytreemaker/examples/LouisXIVfamily.png
 ```
 This script outputs a graph descriptor in DOT format. To make the image
 containing the graph, you will need a graph drawer such as [GraphViz][1].
