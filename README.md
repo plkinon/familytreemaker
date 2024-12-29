@@ -12,29 +12,38 @@ file `LouisXIVfamily.txt`.
 Installation
 ------------
 
-Simply clone the repo.
+1. Clone the repo.
+2. Create and activate a virtual environment
 
-This script outputs a graph descriptor in DOT format. To make the image
-containing the graph, you will need a graph drawer such as [GraphViz][1].
+    ```bash
+    python3.12 -m venv .venv
+    source .venv/bin/activate
+    ```
 
-
+3. Install the local Python package using pip in editable mode: 
+    ```bash
+    pip install --editable .
+    ```
 
 Usage
 -----
 
 The sample family descriptor `LouisXIVfamily.txt` is here to show you the
-usage. Simply run:
+usage. With the activated environment, simply run:
+
 ```bash
-python create.py -a 'Louis XIV' LouisXIVfamily.txt | dot -Tpng -o LouisXIVfamily.png
+python scripts/create.py -a 'Louis XIV' LouisXIVfamily.txt | dot -Tpng -o LouisXIVfamily.png
 ```
 It will generate the tree from the infos in `LouisXIVfamily.txt`, starting from
 *Louis XIV* and saving the image in `LouisXIVfamily.png`.
 
 You can do both steps seperately, as well:
 ```bash
-python main.py -a 'Louis XIV' LouisXIVfamily.txt
+python scripts/main.py -a 'Louis XIV' LouisXIVfamily.txt
 dot family.dot -Tpng -o LouisXIVfamily.png
 ```
+This script outputs a graph descriptor in DOT format. To make the image
+containing the graph, you will need a graph drawer such as [GraphViz][1].
 
 You can see the result:
 
