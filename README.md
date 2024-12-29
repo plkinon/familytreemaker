@@ -25,14 +25,14 @@ Usage
 The sample family descriptor `LouisXIVfamily.txt` is here to show you the
 usage. Simply run:
 ```bash
-python create.py -a 'Louis XIV' LouisXIVfamily.txt | dot -Tpng -o LouisXIVfamily.png
+python scripts/create.py -a 'Louis XIV' LouisXIVfamily.txt | dot -Tpng -o LouisXIVfamily.png
 ```
 It will generate the tree from the infos in `LouisXIVfamily.txt`, starting from
 *Louis XIV* and saving the image in `LouisXIVfamily.png`.
 
 You can do both steps seperately, as well:
 ```bash
-python main.py -a 'Louis XIV' LouisXIVfamily.txt
+python scripts/main.py -a 'Louis XIV' LouisXIVfamily.txt
 dot family.dot -Tpng -o LouisXIVfamily.png
 ```
 

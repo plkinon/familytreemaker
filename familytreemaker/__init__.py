@@ -1,0 +1,1 @@
+from .familytreemaker import Family
