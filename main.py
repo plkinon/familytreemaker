@@ -1,5 +1,6 @@
 import argparse
 from familytreemaker import Family
+import sys
 
 """Entry point of the program when called as a script.
 
@@ -35,4 +36,5 @@ else:
     ancestor = family.find_first_ancestor()
 
 # Output the graph descriptor, in DOT format
+sys.stdout = open("family.dot", "wt")
 family.output_descending_tree(ancestor)
