@@ -1,0 +1,63 @@
+digraph {
+	node [shape=box];
+	edge [dir=none];
+
+	LouisXIV[label="Louis XIV\n1638-09-05 † 1715-09-01",style=filled,fillcolor=azure2];
+	MarieThrsedAutriche[label="Marie-Thérèse d'Autriche",style=filled,fillcolor=bisque];
+	Louis1661[label="Louis de France\n1661-11-01 † 1711-04-14",style=filled,fillcolor=azure2];
+	MarieThrsendeFrance[label="Marie-Thérèse\nde France\n« la Petite Madame»\n1667 † 1672",style=filled,fillcolor=bisque];
+	PhilippeCharlesndeFrance[label="Philippe-Charles\nde France\n« Duc d'Anjou»\n1668-08-05",style=filled,fillcolor=azure2];
+	MarieAnnenChristinendeBavire[label="Marie Anne\nChristine\nde Bavière",style=filled,fillcolor=bisque];
+	Louis1682[label="Louis de France\n« duc de Bourgogne»\n1682 † 1712-02-19",style=filled,fillcolor=azure2];
+	Philippe[label="Philippe\n« roi d'Espagne\nsous le nom de\nPhilippe V»\n1683 † 1746",style=filled,fillcolor=azure2];
+	Charles[label="Charles\n1686-07-31",style=filled,fillcolor=azure2];
+	MarieAdladendeSavoie[label="Marie-Adélaïde\nde Savoie\n† 1712-02-12",style=filled,fillcolor=bisque];
+	LouisXV[label="Louis XV\n1710-02-15 † 1774-05-10",style=filled,fillcolor=azure2];
+
+	{ rank=same;
+		LouisXIV -> h0 -> MarieThrsedAutriche;
+		h0[shape=circle,label="",height=0.01,width=0.01];
+	}
+	{ rank=same;
+		h0_0 -> h0_1 -> h0_2;
+		h0_0[shape=circle,label="",height=0.01,width=0.01];
+		h0_1[shape=circle,label="",height=0.01,width=0.01];
+		h0_2[shape=circle,label="",height=0.01,width=0.01];
+	}
+		h0 -> h0_1;
+		h0_0 -> Louis1661;
+		h0_1 -> MarieThrsendeFrance;
+		h0_2 -> PhilippeCharlesndeFrance;
+	{ rank=same;
+		Louis1661 -> h1 -> MarieAnnenChristinendeBavire;
+		h1[shape=circle,label="",height=0.01,width=0.01];
+		MarieAnnenChristinendeBavire -> MarieThrsendeFrance [style=invis];
+		MarieThrsendeFrance -> PhilippeCharlesndeFrance [style=invis];
+	}
+	{ rank=same;
+		h1_0 -> h1_1 -> h1_2;
+		h1_0[shape=circle,label="",height=0.01,width=0.01];
+		h1_1[shape=circle,label="",height=0.01,width=0.01];
+		h1_2[shape=circle,label="",height=0.01,width=0.01];
+	}
+		h1 -> h1_1;
+		h1_0 -> Louis1682;
+		h1_1 -> Philippe;
+		h1_2 -> Charles;
+	{ rank=same;
+		Louis1682 -> h2 -> MarieAdladendeSavoie;
+		h2[shape=circle,label="",height=0.01,width=0.01];
+		MarieAdladendeSavoie -> Philippe [style=invis];
+		Philippe -> Charles [style=invis];
+	}
+	{ rank=same;
+		h2_0;
+		h2_0[shape=circle,label="",height=0.01,width=0.01];
+	}
+		h2 -> h2_0;
+		h2_0 -> LouisXV;
+	{ rank=same;
+	}
+	{ rank=same;
+	}
+}
