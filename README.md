@@ -1,5 +1,8 @@
-familytreemaker
-===============
+# `familytreemaker`
+*Originally developed by 
+[Adrien Vergé](https://github.com/adrienverge), it is now a python package.*
+
+## What is it?
 
 This program creates family tree graphs from simple text files.
 
@@ -9,8 +12,7 @@ repeated as long as they keep the same name or id. An example is given in the
 file `LouisXIVfamily.txt`.
 
 
-Installation
-------------
+## How do I install it?
 
 1. Clone the repo.
 2. Create and activate a virtual environment
@@ -25,8 +27,7 @@ Installation
     pip install --editable .
     ```
 
-Usage
------
+## How do I use it?
 
 The sample family descriptor `LouisXIVfamily.txt` is here to show you the
 usage. With the activated environment, simply run:
@@ -43,8 +44,10 @@ python scripts/main.py -a 'Louis XIV' familytreemaker/examples/LouisXIVfamily.tx
 dot familytreemaker/examples/LouisXIVfamily.dot -Tpng -o familytreemaker/examples/LouisXIVfamily.png
 ```
 This script outputs a graph descriptor in DOT format. To make the image
-containing the graph, you will need a graph drawer such as [GraphViz][1].
+containing the graph, you will need a graph drawer such as [GraphViz](https://www.graphviz.org).
+
+## What is the output?
 
 You can see the result:
 
-![result: LouisXIVfamily.png](/LouisXIVfamily.png)
+![result: LouisXIVfamily.png](familytreemaker/examples/LouisXIVfamily.png)
